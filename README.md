@@ -18,4 +18,5 @@ Data collected from the accelerometers from the Samsung Galaxy S smartphones
    
 # Additional Information 
 For additional information on data manipulation, please refer to the CodeBook.MD file
+
 For additional information on the data source, please refer to this link: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
