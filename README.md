@@ -7,7 +7,7 @@ Date: 11/16/2018
 To produce a tidy data set combining "test" and "training" data sets for future analysis.
 
 # Data Source:
-Data collected from the accelerometers from the Samsung Galaxy S smartphones
+Data collected from the accelerometers inside Samsung Galaxy S smartphones*
 
 # Parameters:
    1) Merge the training and the test sets to create one data set.
@@ -19,4 +19,4 @@ Data collected from the accelerometers from the Samsung Galaxy S smartphones
 # Additional Information 
 For additional information on data manipulation, please refer to the CodeBook.MD file
 
-For additional information on the data source, please refer to this link: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+For additional information on the data source*, please refer to this link: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
