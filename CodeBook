@@ -22,7 +22,10 @@ Date: 11/16/2018
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
 
+
 # Data Manipulation/Processing:
+
+#Merge the training and test sets to create one data set
 1) Download the zip file and unzip the contents.
 2) Parse out the Training and Test data sets:
 		          Data Table	     file path	
@@ -37,9 +40,15 @@ Date: 11/16/2018
 	SubjectDataSet	<-	TrainingSubject + TestSubject
 	XDataSet	<-	TrainingSetX + TestSetX
 	YDataSet	<-	TrainingLabelsY + TestLabelsY
+
+#Extract only the measurements on the mean and standard deviation for each measurement
 4) Read the Features names (/features.txt)--these are the column headers for XDataSet
 5) Use grep() to find Features that contain the strings "-mean()" or "-std()"
+
+#Use descriptive activity names to name the activities in the data set
 6) Rename the variable names of grep() results to descriptive Features names
+
+#Appropriately label the data set with descriptive activity names.
 7) Read Activity Labels and replace YDataSet values with descriptive Activity Labels
 8) Rename YDataSet to "Activity"
 9) Rename SubjectDataSet to "Subject"
@@ -49,5 +58,7 @@ Date: 11/16/2018
 			      + SubjectDataSet
 11) Standardize column names in MasterDataSet (make.names()) and translate invalid characters to "."
 12) Use gsub() to replace abbreviated strings in the column names with more descriptive strings 
+
+#Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 13) Aggregate a final tidy dataset (TidyDataSet) and calculate mean
 14) Write TidyDataSet to .txt file
