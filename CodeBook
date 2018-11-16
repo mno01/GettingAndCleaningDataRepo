@@ -1,0 +1,53 @@
+# Getting and Cleaning Data Course Project
+# Johns Hopkins Coursera
+
+Date: 11/16/2018
+
+# Background & Data Source
+  The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
+  Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. 
+  Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. 
+  The experiments have been video-recorded to label the data manually. 
+  The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+  The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+
+# Data Source 
+  Data was collected from accelerometers inside Samsung Galaxy S smartphones.
+
+# Variables
+  For each record it is provided:
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+
+# Data Manipulation/Processing:
+1) Download the zip file and unzip the contents.
+2) Parse out the Training and Test data sets:
+		          Data Table	     file path	
+	Training:   TrainingSubject  (/subject_train.txt)
+		          TrainingSetX	   (/x_train.txt)
+		          TrainingLabelsY  (/y_train.txt)
+	
+	Test:      TestSubject     (/subject_test.txt)
+		         TestSetX        (/x_test.txt)
+		         TestLabelsY     (/y_test.txt)
+3) Row bind the Test and Training Sets for similar topics:
+	SubjectDataSet	<-	TrainingSubject + TestSubject
+	XDataSet	<-	TrainingSetX + TestSetX
+	YDataSet	<-	TrainingLabelsY + TestLabelsY
+4) Read the Features names (/features.txt)--these are the column headers for XDataSet
+5) Use grep() to find Features that contain the strings "-mean()" or "-std()"
+6) Rename the variable names of grep() results to descriptive Features names
+7) Read Activity Labels and replace YDataSet values with descriptive Activity Labels
+8) Rename YDataSet to "Activity"
+9) Rename SubjectDataSet to "Subject"
+10) Create the MasterDataSet by column binding:
+	MasterDataSet	<- 	XDataSet_mean_std --XDataSet filtered to data only pertaining to mean and std deviation
+			      + YDataSet	  --YDataSet replaced with descriptive Activity Labels
+			      + SubjectDataSet
+11) Standardize column names in MasterDataSet (make.names()) and translate invalid characters to "."
+12) Use gsub() to replace abbreviated strings in the column names with more descriptive strings 
+13) Aggregate a final tidy dataset (TidyDataSet) and calculate mean
+14) Write TidyDataSet to .txt file
