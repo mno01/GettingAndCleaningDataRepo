@@ -1,9 +1,9 @@
-# Getting and Cleaning Data Course Project
-# Johns Hopkins Coursera
+Getting and Cleaning Data Course Project
+Johns Hopkins Coursera
 
 Date: 11/16/2018
 
-# Background & Data Source
+Background & Data Source
   The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
   Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) 
   wearing a smartphone (Samsung Galaxy S II) on the waist.  Using its embedded accelerometer and gyroscope, we captured 
@@ -16,11 +16,11 @@ Date: 11/16/2018
   therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by 
   calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
-# Data Source
+Data Source
   Please refer to the link below for information on the data source:
   http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-# Variables
+Variables
   For each record it is provided:
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 - Triaxial Angular velocity from the gyroscope. 
@@ -29,9 +29,9 @@ Date: 11/16/2018
 - An identifier of the subject who carried out the experiment.
 
 
-# Data Manipulation/Processing:
+Data Manipulation/Processing:
 
-#Merge the training and test sets to create one data set
+Merge the training and test sets to create one data set
 1) Download the zip file and unzip the contents.
 2) Parse out the Training and Test data sets:
 		          Data Table	     file path	
@@ -47,14 +47,14 @@ Date: 11/16/2018
 	XDataSet	<-	TrainingSetX + TestSetX
 	YDataSet	<-	TrainingLabelsY + TestLabelsY
 
-#Extract only the measurements on the mean and standard deviation for each measurement
+Extract only the measurements on the mean and standard deviation for each measurement
 4) Read the Features names (/features.txt)--these are the column headers for XDataSet
 5) Use grep() to find Features that contain the strings "-mean()" or "-std()"
 
-#Use descriptive activity names to name the activities in the data set
+Use descriptive activity names to name the activities in the data set
 6) Rename the variable names of grep() results to descriptive Features names
 
-#Appropriately label the data set with descriptive activity names.
+Appropriately label the data set with descriptive activity names.
 7) Read Activity Labels and replace YDataSet values with descriptive Activity Labels
 8) Rename YDataSet to "Activity"
 9) Rename SubjectDataSet to "Subject"
@@ -65,6 +65,6 @@ Date: 11/16/2018
 11) Standardize column names in MasterDataSet (make.names()) and translate invalid characters to "."
 12) Use gsub() to replace abbreviated strings in the column names with more descriptive strings 
 
-#Create a second, independent tidy data set with the average of each variable for each activity and each subject.
+Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 13) Aggregate a final tidy dataset (TidyDataSet) and calculate mean
 14) Write TidyDataSet to .txt file
