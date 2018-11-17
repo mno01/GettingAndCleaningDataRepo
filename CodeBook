@@ -45,6 +45,11 @@ Variables
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
 
+Variable Units:
+-Accelerometer output = rad/sec
+-Gyroscope output = g/sec
+-Jerk = rad/sec/sec
+
 
 Data Manipulation/Processing:
 
