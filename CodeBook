@@ -17,8 +17,25 @@ Background & Data Source
   calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
 Data Source
-  Please refer to the link below for information on the data source:
+  Please refer to the link below for information on the data source*:
   http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Files
+  'README.txt'
+
+  'features_info.txt': Shows information about the variables used on the feature vector.
+
+  'features.txt': List of all features.
+
+  'activity_labels.txt': Links the class labels with their activity name.
+
+  'train/X_train.txt': Training set.
+
+  'train/y_train.txt': Training labels.
+
+  'test/X_test.txt': Test set.
+
+  'test/y_test.txt': Test labels.
 
 Variables
   For each record it is provided:
@@ -35,11 +52,11 @@ Merge the training and test sets to create one data set
 1) Download the zip file and unzip the contents.
 2) Parse out the Training and Test data sets:
 		          Data Table	     file path	
-	Training:   TrainingSubject  (/subject_train.txt)
+	Training:         TrainingSubject  (/subject_train.txt)
 		          TrainingSetX	   (/x_train.txt)
 		          TrainingLabelsY  (/y_train.txt)
 	
-	Test:      TestSubject     (/subject_test.txt)
+	Test:            TestSubject     (/subject_test.txt)
 		         TestSetX        (/x_test.txt)
 		         TestLabelsY     (/y_test.txt)
 3) Row bind the Test and Training Sets for similar topics:
@@ -68,3 +85,7 @@ Appropriately label the data set with descriptive activity names.
 Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 13) Aggregate a final tidy dataset (TidyDataSet) and calculate mean
 14) Write TidyDataSet to .txt file
+
+*Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones 
+using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). 
+Vitoria-Gasteiz, Spain. Dec 2012
