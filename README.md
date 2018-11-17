@@ -1,5 +1,6 @@
 # GettingAndCleaningDataRepo
 2018 Coursera Getting and Cleaning Data Project Repo
+R Version and Libraries R version 3.5.1
 
 Date: 11/16/2018
 
