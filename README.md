@@ -16,7 +16,7 @@ Data collected from the accelerometers inside Samsung Galaxy S smartphones*
    4) Appropriately label the data set with descriptive variable names. 
    5) From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
    
-# Additional Information 
+# Additional Information:
 For additional information on data manipulation, please refer to the CodeBook.MD file
 
 For additional information on the data source*, please refer to this link: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
