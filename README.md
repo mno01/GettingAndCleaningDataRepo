@@ -11,6 +11,23 @@ To produce a tidy data set combining "test" and "training" data sets for future 
 # Data Source:
 Data collected from the accelerometers inside Samsung Galaxy S smartphones*
 
+# Data Files:
+'README.txt'
+
+'features_info.txt': Shows information about the variables used on the feature vector.
+
+'features.txt': List of all features.
+
+'activity_labels.txt': Links the class labels with their activity name.
+
+'train/X_train.txt': Training set.
+
+'train/y_train.txt': Training labels.
+
+'test/X_test.txt': Test set.
+
+'test/y_test.txt': Test labels.
+
 # Parameters:
    1) Merge the training and the test sets to create one data set.
    2) Extract only the measurements on the mean and standard deviation for each measurement. 
