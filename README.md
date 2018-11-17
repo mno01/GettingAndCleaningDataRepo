@@ -21,3 +21,5 @@ Data collected from the accelerometers inside Samsung Galaxy S smartphones*
 For additional information on data manipulation, please refer to the CodeBook.MD file
 
 For additional information on the data source*, please refer to this link: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+*The original data set used was created by: [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
